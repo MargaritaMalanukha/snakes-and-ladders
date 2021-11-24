@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 
 public class GameAlreadyStartedException extends GameException {
 
-    public GameAlreadyStartedException(ExceptionMessages message) {
+    public GameAlreadyStartedException(ExceptionMessage message) {
         super(message.getMessage(), HttpStatus.BAD_REQUEST);
     }
 

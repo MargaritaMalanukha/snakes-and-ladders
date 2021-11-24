@@ -1,7 +1,7 @@
 package com.malanukha.service.game;
 
 import com.malanukha.dto.GameInfoDto;
-import com.malanukha.exceptions.ExceptionMessages;
+import com.malanukha.exceptions.ExceptionMessage;
 import com.malanukha.exceptions.UnregisteredUserException;
 import com.malanukha.service.move.MoveGenerator;
 import com.malanukha.service.register.RegistrationValidator;
@@ -35,7 +35,7 @@ public class GameServiceImpl implements GameService {
         }
 
         if (gameInfoHolder.getUserName() == null) {
-            throw new UnregisteredUserException(ExceptionMessages.UNREGISTERED_USER);
+            throw new UnregisteredUserException(ExceptionMessage.UNREGISTERED_USER);
         }
 
         gameInfoHolder.setGameStarted(true);

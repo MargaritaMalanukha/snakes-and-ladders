@@ -3,7 +3,7 @@ package com.malanukha.exceptions;
 import lombok.Getter;
 
 @Getter
-public enum ExceptionMessages {
+public enum ExceptionMessage {
 
     GAME_ALREADY_STARTED("Game has already started!"),
     UNREGISTERED_USER("You are unregistered in game. To register, make a POST request on this root."),
@@ -11,7 +11,7 @@ public enum ExceptionMessages {
 
     private final String message;
 
-    ExceptionMessages(String message) {
+    ExceptionMessage(String message) {
         this.message = message;
     }
 
