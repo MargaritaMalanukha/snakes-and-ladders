@@ -15,11 +15,6 @@ public class GameInfoHolder {
 
     private GameInfoDto gameInfoDto;
 
-    @PostConstruct
-    private void initGameInfoDto() {
-        refreshGameInfoDto();
-    }
-
     public void refreshGameInfoDto() {
         gameInfoDto = new GameInfoDto(new UserDto());
     }
@@ -58,5 +53,10 @@ public class GameInfoHolder {
 
     public GameInfoDto getGameInfoDto() {
         return gameInfoDto;
+    }
+
+    @PostConstruct
+    private void initGameInfoDto() {
+        refreshGameInfoDto();
     }
 }
